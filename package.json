@@ -24,7 +24,7 @@
     "migrations:create": "npm run typeorm -- migration:create src/database/migrations/",
     "migrations:run": "npm run typeorm -- migration:run -d src/database/dataSource.ts",
     "migrations:show": "npm run typeorm -- migration:show -d src/database/dataSource.ts",
-    "migrations:drop": "npm run typeorm -- migration:drop -d src/database/dataSource.ts"
+    "migrations:drop": "npm run typeorm -- schema:drop -d src/database/dataSource.ts"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.13",
