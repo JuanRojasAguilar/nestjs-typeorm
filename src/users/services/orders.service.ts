@@ -30,6 +30,14 @@ export class OrdersService {
     return order;
   }
 
+  async ordersByCustomer(customerId: number) {
+    return this.orderRepo.find({
+      where: {
+        customer: { id: customerId },
+      },
+    });
+  }
+
   async create(data: CreateOrderDto) {
     const order = new Order();
     if (data.customerId) {
